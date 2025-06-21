@@ -1,0 +1,47 @@
+@ApiClientes_HostAddress = http://localhost:5070/api/clientes
+
+### 🔄 Criar um cliente
+POST {{ApiClientes_HostAddress}}
+Content-Type: application/json
+
+{
+  "nome": "João Silva",
+  "email": "joao.silva@email.com"
+}
+
+###
+
+### 📋 Listar todos os clientes
+GET {{ApiClientes_HostAddress}}
+
+###
+
+### 🔍 Buscar cliente por ID
+GET {{ApiClientes_HostAddress}}/1
+
+###
+
+### 🔍 Buscar cliente por nome
+GET {{ApiClientes_HostAddress}}/search?name=João
+
+###
+
+### 🔢 Contar total de clientes
+GET {{ApiClientes_HostAddress}}/count
+
+###
+
+### ✏️ Atualizar cliente
+PUT {{ApiClientes_HostAddress}}/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "nome": "João Atualizado",
+  "email": "joao.atualizado@email.com"
+}
+
+###
+
+### ❌ Deletar cliente
+DELETE {{ApiClientes_HostAddress}}/1
